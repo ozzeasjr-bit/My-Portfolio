@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log In Tab</title>
+</head>
+
+<body>
+  <div class="puke">
+    <p id="hipo">Sign In</p>
+    <form action="tite.html" id="Rene">
+    <input type="text" class="username"
+    placeholder="Input Your Username"
+    required
+    >
+    <input type="password" id="password" placeholder="Input Your Password"
+    required
+    >
+      <input type="password" id="machimachi" placeholder="Repeat Password"
+      required
+    >
+    <br>
+     <p id="crushkosiya"></p>
+    <button type"submit" id="Mier">Enter
+    </button>
+    </form>
+  </div>
+  
+</body>
+<script>
+  //dito kinukuha ang id
+  const password =
+  document.getElementById("password");
+  const tignannatinkongtama =
+  document.getElementById("machimachi");
+  const mama =
+  document.getElementById("Mier");
+  const tangamo =
+  document.getElementById("crushkosiya");
+  const happysiya =
+  document.getElementById("Rene");
+  
+   happysiya.addEventListener("submit", function(event) {
+  if (password.value !== tignannatinkongtama.value) {
+    event.preventDefault();
+
+    tangamo.textContent =
+      "Paki ulit beh, hindi nag-match eh.";
+  } else {
+    tangamo.textContent =
+      "Ayon, nag-match!";
+  }
+});
+
+  //function dito okay
+  function tamaba(){
+    
+    if (
+      password.value !== "" &&
+      password.value !==
+      tignannatinkongtama.value
+    ) {
+      tangamo.textContent="Paki ulit beh ng password hindi nag match eh.";
+      } else {
+        tangamo.textContent="Ayonch nag match";
+      }
+    
+    
+     mama.disabled =
+     password.value === "" ||
+     password.value !==
+     tignannatinkongtama.value;
+    
+  }
+  
+  tignannatinkongtama.addEventListener("input",
+    tamaba);
+  
+</script>
+
+<link rel="stylesheet" href="styleforpage1.css">
+
+</html>
